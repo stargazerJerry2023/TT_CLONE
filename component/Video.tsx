@@ -24,11 +24,12 @@ export default function VideoFeed({url}: {url: string}) {
   return (
     <>
       <div className= "h-full w-full overflow-hidden relative flex justify-center items-center">
-        <video ref={videoRef}  src={url}  className= "z-0 absolute inset-0 h-full object-cover rounded-2xl"/>
+        <video ref={videoRef}  src={url} className="absolute inset-0 h-full w-full object-cover z-0 rounded-2xl"
+        />
       <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center" onClick={
         togglePlay
       }>
-           {isPaused && (
+        {isPaused && (
           <img
             key={isPaused.id}
             src={isPaused.type ? "/pause.png" : "/play.png"}
@@ -36,6 +37,7 @@ export default function VideoFeed({url}: {url: string}) {
             alt={isPaused.type ? "Pause" : "Play"}
           />
         )}
+           
       </div>
       
     </div>

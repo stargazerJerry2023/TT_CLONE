@@ -11,9 +11,14 @@ export default async function Home() {
   console.log(data[0].url)
  
   return (
-    <main className="h-screen w-screen grid place-items-center">
-      <p className="text-lg">Workshop TODO: Implement app/page.tsx</p>
+    <div className="h-screen w-screen flex justify-center items-center">
+                <div className="flex h-[90%] w-[40%] bg-black flex justify-center items-center rounded-2xl">
       <VideoFeed url={data[0].url} />
-    </main>
+      </div>
+    </div>
+
+
   );
+
+
 }
